@@ -1,14 +1,18 @@
 import React from 'react';
+import { WithLang } from '../../HOCs';
+import { getContent } from '../../../locale';
 import Child from '../Child';
 
 const Parent = (props) => {
-
+  const { locale } = props;
   return (
     <div>
-      <h2>Parent</h2>
-      <Child/>
+      <h2>{getContent(locale, 'Parent')}</h2>
+      <Child />
     </div>
   );
 }
 
-export default Parent;
+const ParentWithLang = WithLang(Parent);
+
+export default ParentWithLang;

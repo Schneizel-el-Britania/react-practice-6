@@ -1,4 +1,4 @@
-import { ThemeContext, UserContext } from "../../context";
+import { ThemeContext, UserContext, LangContext } from "../../context";
 
 export const WithTheme = InnerComponent => {
   return (props) => {
@@ -15,3 +15,7 @@ export const WithUser = InnerComponent => (props) =>
     (user) => (<InnerComponent user={user} {...props} />)
   }</UserContext.Consumer>
 
+export const WithLang = InnerComponent => (props) =>
+  <LangContext.Consumer>{
+    (locale) => (<InnerComponent locale={locale} {...props} />)
+  }</LangContext.Consumer>
