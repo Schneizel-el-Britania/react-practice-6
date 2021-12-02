@@ -17,5 +17,5 @@ export const WithUser = InnerComponent => (props) =>
 
 export const WithLang = InnerComponent => (props) =>
   <LangContext.Consumer>{
-    (locale) => (<InnerComponent locale={locale} {...props} />)
+    ([locale, setLang]) => (<InnerComponent locale={locale} setLang={setLang} {...props} />)
   }</LangContext.Consumer>

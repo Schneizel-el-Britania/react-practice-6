@@ -8,5 +8,6 @@ const langs = {
 
 const getLocale = (lang) => langs[lang];
 const getContent = (lang, content) => getLocale(lang)[content];
+const getLangList = () => Object.keys(langs);
 
-export { getLocale, getContent };
+export { getLocale, getContent, getLangList };

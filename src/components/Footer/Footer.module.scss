@@ -1,0 +1,19 @@
+@import "../../common/styles/templates";
+
+.container {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  justify-content: flex-end;
+
+  position: fixed;
+  bottom: 0;
+}
+
+.light {
+  @extend %light;
+}
+
+.dark {
+  @extend %dark;
+}
